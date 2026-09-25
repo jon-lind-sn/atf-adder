@@ -1,0 +1,19 @@
+{
+    "name": "atf-adder",
+    "version": "1.0.0",
+    "description": "Code to add an existing ATF Test or Suite to an update set.",
+    "license": "UNLICENSED",
+    "imports": {
+        "#now:*": "./@types/servicenow/fluent/*/index.js"
+    },
+    "scripts": {
+        "build": "now-sdk build",
+        "deploy": "now-sdk install",
+        "transform": "now-sdk transform",
+        "types": "now-sdk dependencies"
+    },
+    "devDependencies": {
+        "@servicenow/glide": "27.0.5",
+        "@servicenow/sdk": "^4.13.0"
+    }
+}

@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?><unload unload_date=""><sys_remote_update_set action="INSERT_OR_UPDATE"><application display_value="Global">global</application><application_name>Global</application_name><application_scope>global</application_scope><collisions /><commit_date /><deleted /><description /><inserted /><name>ATF Adder v1.0.0</name><origin_sys_id /><parent display_value="" /><release_date /><remote_base_update_set display_value="" /><remote_parent_id /><remote_sys_id>04cfd9707eab4d4e008e0ffe7b5e149c</remote_sys_id><state>loaded</state><summary /><sys_class_name>sys_remote_update_set</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on /><sys_id>0ce07af8b0877b519c80793d863ddcad</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on /><update_set display_value="" /><update_source display_value="" /><updated /></sys_remote_update_set><sys_update_xml action="INSERT_OR_UPDATE"><action>INSERT_OR_UPDATE</action><application display_value="ATF Adder">c3e474398731471d9c817d4c20087e92</application><category>customer</category><comments /><name>sys_module_2eda7231e16142bf8e34c42b1b098939</name><payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_module">
+  <sys_module action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>2eda7231e16142bf8e34c42b1b098939</sys_id>
+    <sys_scope display_value="global">c3e474398731471d9c817d4c20087e92</sys_scope>
+    <sys_update_name>sys_module_2eda7231e16142bf8e34c42b1b098939</sys_update_name>
+    <content>{
+  "name": "atf-adder",
+  "version": "1.0.0",
+  "description": "Code to add an existing ATF Test or Suite to an update set.",
+  "license": "UNLICENSED",
+  "imports": {
+    "#now:*": "./@types/servicenow/fluent/*/index.js"
+  },
+  "scripts": {
+    "build": "now-sdk build",
+    "deploy": "now-sdk install",
+    "transform": "now-sdk transform",
+    "types": "now-sdk dependencies"
+  },
+  "devDependencies": {
+    "@servicenow/glide": "27.0.5",
+    "@servicenow/sdk": "^4.13.0"
+  }
+}</content>
+    <external_source>false</external_source>
+    <path>/global/atf-adder/1.0.0/package.json</path>
+    <sys_name>/global/atf-adder/1.0.0/package.json</sys_name>
+  </sys_module>
+</record_update>]]></payload><payload_hash /><remote_update_set display_value="ATF Adder">0ce07af8b0877b519c80793d863ddcad</remote_update_set><replace_on_upgrade>false</replace_on_upgrade><sys_created_by>admin</sys_created_by><sys_created_on /><sys_id>dc4eb8d23aac65e7743bc91c3f6beb3e</sys_id><sys_mod_count>0</sys_mod_count><sys_recorded_at>19fdd2b0000000001</sys_recorded_at><sys_updated_by>admin</sys_updated_by><sys_updated_on /><table /><target_name>/global/atf-adder/1.0.0/package.json</target_name><type>Sys Module</type><update_domain>global</update_domain><update_guid /><update_guid_history /><update_set display_value="" /><view /></sys_update_xml><sys_update_xml action="INSERT_OR_UPDATE"><action>INSERT_OR_UPDATE</action><application display_value="ATF Adder">c3e474398731471d9c817d4c20087e92</application><category>customer</category><comments /><name>sys_module_8b5c78b294b941ba89dbdb5db199241f</name><payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update>
+  <sys_module action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>8b5c78b294b941ba89dbdb5db199241f</sys_id>
+    <sys_scope display_value="global">c3e474398731471d9c817d4c20087e92</sys_scope>
+    <path>/global/atf-adder/1.0.0/bom.json</path>
+    <external_source>false</external_source>
+    <content>{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "serialNumber": "urn:uuid:80394362-3c45-43ef-b2e1-4f37c1bb6808",
+  "metadata": {
+    "timestamp": "2026-09-25T18:07:18.937Z",
+    "tools": {
+      "components": [
+        {
+          "type": "library",
+          "name": "sdk-build-plugins",
+          "group": "@servicenow",
+          "version": "4.13.0",
+          "author": "ServiceNow"
+        }
+      ]
+    },
+    "component": {
+      "type": "application",
+      "name": "atf-adder",
+      "version": "1.0.0",
+      "bom-ref": "pkg:servicenow/atf-adder@1.0.0?sys_scope_id=c3e474398731471d9c817d4c20087e92",
+      "description": "Code to add an existing ATF Test or Suite to an update set.",
+      "licenses": [
+        {
+          "license": {
+            "name": "UNLICENSED"
+          }
+        }
+      ],
+      "purl": "pkg:servicenow/atf-adder@1.0.0?sys_scope_id=c3e474398731471d9c817d4c20087e92"
+    }
+  },
+  "components": [],
+  "dependencies": [
+    {
+      "ref": "pkg:servicenow/atf-adder@1.0.0?sys_scope_id=c3e474398731471d9c817d4c20087e92"
+    }
+  ]
+}</content>
+  </sys_module>
+</record_update>]]></payload><payload_hash /><remote_update_set display_value="ATF Adder">0ce07af8b0877b519c80793d863ddcad</remote_update_set><replace_on_upgrade>false</replace_on_upgrade><sys_created_by>admin</sys_created_by><sys_created_on /><sys_id>851715f8d73f2c3cd62b6bc3dbe64469</sys_id><sys_mod_count>0</sys_mod_count><sys_recorded_at>19fdd2b0010000001</sys_recorded_at><sys_updated_by>admin</sys_updated_by><sys_updated_on /><table /><target_name>/global/atf-adder/1.0.0/bom.json</target_name><type>Sys Module</type><update_domain>global</update_domain><update_guid /><update_guid_history /><update_set display_value="" /><view /></sys_update_xml><sys_update_xml action="INSERT_OR_UPDATE"><action>INSERT_OR_UPDATE</action><application display_value="ATF Adder">c3e474398731471d9c817d4c20087e92</application><category>customer</category><comments /><name>sys_script_include_23dbd23c0c3f410fb010b2a57a64b0d1</name><payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+  <sys_script_include action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>23dbd23c0c3f410fb010b2a57a64b0d1</sys_id>
+    <sys_scope display_value="global">c3e474398731471d9c817d4c20087e92</sys_scope>
+    <sys_update_name>sys_script_include_23dbd23c0c3f410fb010b2a57a64b0d1</sys_update_name>
+    <access>public</access>
+    <active>true</active>
+    <api_name>global.AtfAddToUpdateSet</api_name>
+    <caller_access />
+    <client_callable>false</client_callable>
+    <description>Adds an ATF Test or Test Suite (and its child tests/steps) to the current update set, after confirming the record is in the currently selected application scope.</description>
+    <mobile_callable>false</mobile_callable>
+    <name>AtfAddToUpdateSet</name>
+    <sandbox_callable>false</sandbox_callable>
+    <script>var AtfAddToUpdateSet = Class.create();
+// NOTE: This runs in GLOBAL scope, which this instance compiles at ES Level 0
+// (legacy Rhino) regardless of the app's js_level=es_latest. Keep this file ES5:
+// no arrow functions, no const/let, no object shorthand. See AGENTS.md.
+AtfAddToUpdateSet.prototype = (function () {
+    function touchRecord(gr, touched) {
+        gr.setForceUpdate(true);
+        gr.update();
+        touched.push(gr.getTableName() + '_' + gr.getUniqueValue());
+        return 1;
+    }
+
+    function getRecord(grOrSysId, tableName) {
+        if (grOrSysId instanceof GlideRecord) {
+            return grOrSysId;
+        }
+        var gr = new GlideRecord(tableName);
+        gr.get(grOrSysId);
+        return gr;
+    }
+
+    function scopeMismatchMessage(gr) {
+        // Compares the record's sys_scope reference directly against the
+        // CURRENT UPDATE SET's application reference (sys_update_set.application) --
+        // both point at sys_scope and use the same literal "global" sys_id for
+        // globally scoped records/update sets, so no dereferencing is needed.
+        // This replaces the earlier, disabled guard that mistakenly compared the
+        // record's sys_scope against gs.getCurrentApplicationId() (this app's own
+        // scope, "ATF Adder"), which could never match an OOB-Global ATF test.
+        var recordScope = gr.getValue('sys_scope');
+        if (!recordScope) {
+            return null;
+        }
+
+        var updateSetId = gs.getPreference('sys_update_set');
+        if (!updateSetId) {
+            // No update set selected at all -- let verifyCapture's normal
+            // missing-record reporting surface that, rather than duplicating it here.
+            return null;
+        }
+
+        var updateSetGr = new GlideRecord('sys_update_set');
+        if (!updateSetGr.get(updateSetId)) {
+            return null;
+        }
+
+        if (updateSetGr.getValue('application') === recordScope) {
+            return null;
+        }
+
+        return gs.getMessage('Cannot capture "{0}" ({1}) because it belongs to a different application scope ' +
+            "than the one currently selected. Switch your application scope to match this record's scope, so " +
+            'its update set is selected, and try again.', [gr.getDisplayValue(), gr.getTableName()]);
+    }
+
+    function collectTest(testGrOrSysId, touched) {
+        var atfTest = getRecord(testGrOrSysId, 'sys_atf_test');
+
+        var recordsTouched = touchRecord(atfTest, touched);
+
+        var steps = new GlideRecord('sys_atf_step');
+        steps.addQuery('test', atfTest.getUniqueValue());
+        steps.query();
+        while (steps.next()) {
+            recordsTouched += touchRecord(steps, touched);
+        }
+
+        return recordsTouched;
+    }
+
+    function collectSuite(suiteGrOrSysId, touched) {
+        var atfSuite = getRecord(suiteGrOrSysId, 'sys_atf_test_suite');
+
+        var suiteSysId = atfSuite.getUniqueValue();
+        var recordsTouched = touchRecord(atfSuite, touched);
+
+        var suiteTests = new GlideRecord('sys_atf_test_suite_test');
+        suiteTests.addQuery('test_suite', suiteSysId);
+        suiteTests.query();
+        while (suiteTests.next()) {
+            recordsTouched += touchRecord(suiteTests, touched);
+            recordsTouched += collectTest(suiteTests.test.getRefRecord(), touched);
+        }
+
+        // Suites can nest inside other suites (sys_atf_test_suite.parent) -- capture those too.
+        var childSuites = new GlideRecord('sys_atf_test_suite');
+        childSuites.addQuery('parent', suiteSysId);
+        childSuites.query();
+        while (childSuites.next()) {
+            recordsTouched += collectSuite(childSuites, touched);
+        }
+
+        return recordsTouched;
+    }
+
+    function verifyCapture(touched) {
+        var updateSetId = gs.getPreference('sys_update_set');
+        if (!updateSetId || touched.length === 0) {
+            return { updateSetId: updateSetId, missing: touched.slice() };
+        }
+
+        var found = {};
+        var gr = new GlideRecord('sys_update_xml');
+        gr.addQuery('update_set', updateSetId);
+        gr.addQuery('name', 'IN', touched.join(','));
+        gr.addQuery('action', '!=', 'DELETE');
+        gr.query();
+        while (gr.next()) {
+            found[gr.getValue('name')] = true;
+        }
+
+        var missing = touched.filter(function (key) {
+            return !found[key];
+        });
+        return { updateSetId: updateSetId, missing: missing };
+    }
+
+    function resultMessage(success, recordsTouched, missing) {
+        // gs.getMessage() renders a bare JS number argument via Java number
+        // formatting (e.g. 24 -&gt; "24.0") -- pass counts as strings instead.
+        if (success) {
+            return gs.getMessage('Added {0} record(s) to the current update set.', [String(recordsTouched)]);
+        }
+        return gs.getMessage('Captured {0} record(s), but {1} did not make it into the current update set. ' +
+            'Check your update set selection.', [String(recordsTouched), String(missing.length)]);
+    }
+
+    function addTestToUpdateSet(testGrOrSysId) {
+        var atfTest = getRecord(testGrOrSysId, 'sys_atf_test');
+
+        var mismatch = scopeMismatchMessage(atfTest);
+        if (mismatch) {
+            return { success: false, message: mismatch, recordsTouched: 0, missing: [] };
+        }
+
+        var touched = [];
+        var recordsTouched = collectTest(atfTest, touched);
+        var verification = verifyCapture(touched);
+        var success = verification.missing.length === 0;
+
+        return {
+            success: success,
+            message: resultMessage(success, recordsTouched, verification.missing),
+            recordsTouched: recordsTouched,
+            missing: verification.missing,
+        };
+    }
+
+    function addTestSuiteToUpdateSet(suiteGrOrSysId) {
+        var atfSuite = getRecord(suiteGrOrSysId, 'sys_atf_test_suite');
+
+        var mismatch = scopeMismatchMessage(atfSuite);
+        if (mismatch) {
+            return { success: false, message: mismatch, recordsTouched: 0, missing: [] };
+        }
+
+        var touched = [];
+        var recordsTouched = collectSuite(atfSuite, touched);
+        var verification = verifyCapture(touched);
+        var success = verification.missing.length === 0;
+
+        return {
+            success: success,
+            message: resultMessage(success, recordsTouched, verification.missing),
+            recordsTouched: recordsTouched,
+            missing: verification.missing,
+        };
+    }
+
+    return {
+        initialize: function () { },
+        addTestToUpdateSet: addTestToUpdateSet,
+        addTestSuiteToUpdateSet: addTestSuiteToUpdateSet,
+        type: 'AtfAddToUpdateSet',
+    };
+})();
+</script>
+    <sys_name>AtfAddToUpdateSet</sys_name>
+  </sys_script_include>
+</record_update>]]></payload><payload_hash /><remote_update_set display_value="ATF Adder">0ce07af8b0877b519c80793d863ddcad</remote_update_set><replace_on_upgrade>false</replace_on_upgrade><sys_created_by>admin</sys_created_by><sys_created_on /><sys_id>592709bb8957befb420e241fb671e993</sys_id><sys_mod_count>0</sys_mod_count><sys_recorded_at>19fdd2b0020000001</sys_recorded_at><sys_updated_by>admin</sys_updated_by><sys_updated_on /><table /><target_name>AtfAddToUpdateSet</target_name><type>Sys Script Include</type><update_domain>global</update_domain><update_guid /><update_guid_history /><update_set display_value="" /><view /></sys_update_xml><sys_update_xml action="INSERT_OR_UPDATE"><action>INSERT_OR_UPDATE</action><application display_value="ATF Adder">c3e474398731471d9c817d4c20087e92</application><category>customer</category><comments /><name>sys_ui_action_44e7c05d3cf24822a3defed21b07f879</name><payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_action">
+  <sys_ui_action action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>44e7c05d3cf24822a3defed21b07f879</sys_id>
+    <sys_scope display_value="global">c3e474398731471d9c817d4c20087e92</sys_scope>
+    <sys_update_name>sys_ui_action_44e7c05d3cf24822a3defed21b07f879</sys_update_name>
+    <action_name>add_test_to_update_set</action_name>
+    <active>true</active>
+    <client>false</client>
+    <client_script_v2 />
+    <comments />
+    <condition />
+    <form_action>true</form_action>
+    <form_button>false</form_button>
+    <form_button_v2>false</form_button_v2>
+    <form_context_menu>false</form_context_menu>
+    <form_link>true</form_link>
+    <form_menu_button_v2>false</form_menu_button_v2>
+    <form_style />
+    <format_for_configurable_workspace>false</format_for_configurable_workspace>
+    <hint />
+    <isolate_script>false</isolate_script>
+    <list_action>false</list_action>
+    <list_banner_button>false</list_banner_button>
+    <list_button>false</list_button>
+    <list_choice>false</list_choice>
+    <list_context_menu>false</list_context_menu>
+    <list_link>false</list_link>
+    <list_save_with_form_button>false</list_save_with_form_button>
+    <list_style />
+    <messages />
+    <name>Add Test to Update Set</name>
+    <onclick />
+    <order>100</order>
+    <script>(function () {
+    var atu = new AtfAddToUpdateSet();
+    var result = atu.addTestToUpdateSet(current);
+
+    if (result.success) {
+        gs.addInfoMessage(result.message);
+    } else {
+        gs.addErrorMessage(result.message);
+    }
+
+    // Same technique OOB's "Add to Update Set" UI action uses to return the
+    // user to the page they were on, rather than reconstructing a URL from
+    // current (which can drop view/sysparm context).
+    action.setRedirectURL(GlideSession.get().getStack().bottom());
+})();</script>
+    <show_form_icon_only>false</show_form_icon_only>
+    <show_insert>true</show_insert>
+    <show_list_icon_only>false</show_list_icon_only>
+    <show_multiple_update>false</show_multiple_update>
+    <show_query>false</show_query>
+    <show_update>true</show_update>
+    <sys_name>Add Test to Update Set</sys_name>
+    <sys_overrides />
+    <table>sys_atf_test</table>
+    <ui11_compatible>false</ui11_compatible>
+    <ui16_compatible>false</ui16_compatible>
+  </sys_ui_action>
+</record_update>]]></payload><payload_hash /><remote_update_set display_value="ATF Adder">0ce07af8b0877b519c80793d863ddcad</remote_update_set><replace_on_upgrade>false</replace_on_upgrade><sys_created_by>admin</sys_created_by><sys_created_on /><sys_id>41c469d072b029963675d6d43df16687</sys_id><sys_mod_count>0</sys_mod_count><sys_recorded_at>19fdd2b0030000001</sys_recorded_at><sys_updated_by>admin</sys_updated_by><sys_updated_on /><table /><target_name>Add Test to Update Set</target_name><type>Sys UI Action</type><update_domain>global</update_domain><update_guid /><update_guid_history /><update_set display_value="" /><view /></sys_update_xml><sys_update_xml action="INSERT_OR_UPDATE"><action>INSERT_OR_UPDATE</action><application display_value="ATF Adder">c3e474398731471d9c817d4c20087e92</application><category>customer</category><comments /><name>sys_ui_action_665e23b710cd43c7b943ab65da67b8ec</name><payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_action">
+  <sys_ui_action action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>665e23b710cd43c7b943ab65da67b8ec</sys_id>
+    <sys_scope display_value="global">c3e474398731471d9c817d4c20087e92</sys_scope>
+    <sys_update_name>sys_ui_action_665e23b710cd43c7b943ab65da67b8ec</sys_update_name>
+    <action_name>add_test_suite_to_update_set</action_name>
+    <active>true</active>
+    <client>false</client>
+    <client_script_v2 />
+    <comments />
+    <condition />
+    <form_action>true</form_action>
+    <form_button>false</form_button>
+    <form_button_v2>false</form_button_v2>
+    <form_context_menu>false</form_context_menu>
+    <form_link>true</form_link>
+    <form_menu_button_v2>false</form_menu_button_v2>
+    <form_style />
+    <format_for_configurable_workspace>false</format_for_configurable_workspace>
+    <hint />
+    <isolate_script>false</isolate_script>
+    <list_action>false</list_action>
+    <list_banner_button>false</list_banner_button>
+    <list_button>false</list_button>
+    <list_choice>false</list_choice>
+    <list_context_menu>false</list_context_menu>
+    <list_link>false</list_link>
+    <list_save_with_form_button>false</list_save_with_form_button>
+    <list_style />
+    <messages />
+    <name>Add Test Suite to Update Set</name>
+    <onclick />
+    <order>100</order>
+    <script>(function () {
+    var atu = new AtfAddToUpdateSet();
+    var result = atu.addTestSuiteToUpdateSet(current);
+
+    if (result.success) {
+        gs.addInfoMessage(result.message);
+    } else {
+        gs.addErrorMessage(result.message);
+    }
+
+    // Same technique OOB's "Add to Update Set" UI action uses to return the
+    // user to the page they were on, rather than reconstructing a URL from
+    // current (which can drop view/sysparm context).
+    action.setRedirectURL(GlideSession.get().getStack().bottom());
+})();</script>
+    <show_form_icon_only>false</show_form_icon_only>
+    <show_insert>true</show_insert>
+    <show_list_icon_only>false</show_list_icon_only>
+    <show_multiple_update>false</show_multiple_update>
+    <show_query>false</show_query>
+    <show_update>true</show_update>
+    <sys_name>Add Test Suite to Update Set</sys_name>
+    <sys_overrides />
+    <table>sys_atf_test_suite</table>
+    <ui11_compatible>false</ui11_compatible>
+    <ui16_compatible>false</ui16_compatible>
+  </sys_ui_action>
+</record_update>]]></payload><payload_hash /><remote_update_set display_value="ATF Adder">0ce07af8b0877b519c80793d863ddcad</remote_update_set><replace_on_upgrade>false</replace_on_upgrade><sys_created_by>admin</sys_created_by><sys_created_on /><sys_id>5fb4d14d707d8b35e45d79b048bd32ce</sys_id><sys_mod_count>0</sys_mod_count><sys_recorded_at>19fdd2b0040000001</sys_recorded_at><sys_updated_by>admin</sys_updated_by><sys_updated_on /><table /><target_name>Add Test Suite to Update Set</target_name><type>Sys UI Action</type><update_domain>global</update_domain><update_guid /><update_guid_history /><update_set display_value="" /><view /></sys_update_xml><sys_update_xml action="INSERT_OR_UPDATE"><action>INSERT_OR_UPDATE</action><application display_value="ATF Adder">c3e474398731471d9c817d4c20087e92</application><category>customer</category><comments /><name>sys_app_c3e474398731471d9c817d4c20087e92</name><payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app">
+  <sys_app action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>c3e474398731471d9c817d4c20087e92</sys_id>
+    <sys_scope display_value="global">c3e474398731471d9c817d4c20087e92</sys_scope>
+    <sys_update_name>sys_app_c3e474398731471d9c817d4c20087e92</sys_update_name>
+    <active>true</active>
+    <can_edit_in_studio>true</can_edit_in_studio>
+    <enforce_license>log</enforce_license>
+    <guided_setup_guid />
+    <hide_on_ui>false</hide_on_ui>
+    <ide_created />
+    <installed_as_dependency>false</installed_as_dependency>
+    <js_level>es_latest</js_level>
+    <licensable>true</licensable>
+    <license_category>none</license_category>
+    <license_model>none</license_model>
+    <logo />
+    <menu />
+    <name>ATF Adder</name>
+    <package_json>/global/atf-adder/1.0.0/package.json</package_json>
+    <package_resolver_version>2.0.0</package_resolver_version>
+    <private>false</private>
+    <restrict_table_access>false</restrict_table_access>
+    <runtime_access_tracking>permissive</runtime_access_tracking>
+    <scope>global</scope>
+    <scoped_administration>false</scoped_administration>
+    <short_description />
+    <source>global</source>
+    <subscription_entitlement />
+    <sys_code />
+    <trackable>true</trackable>
+    <uninstall_blocked>false</uninstall_blocked>
+    <user_role />
+    <version>1.0.0</version>
+  </sys_app>
+</record_update>]]></payload><payload_hash /><remote_update_set display_value="ATF Adder">0ce07af8b0877b519c80793d863ddcad</remote_update_set><replace_on_upgrade>false</replace_on_upgrade><sys_created_by>admin</sys_created_by><sys_created_on /><sys_id>d2c9a028b29959b2bffe0e659e24004f</sys_id><sys_mod_count>0</sys_mod_count><sys_recorded_at>19fdd2b0050000001</sys_recorded_at><sys_updated_by>admin</sys_updated_by><sys_updated_on /><table /><target_name>ATF Adder</target_name><type>Sys App</type><update_domain>global</update_domain><update_guid /><update_guid_history /><update_set display_value="" /><view /></sys_update_xml></unload>

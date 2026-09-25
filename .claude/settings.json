@@ -1,0 +1,5 @@
+{
+  "enabledPlugins": {
+    "servicenow-sdk@claude-plugins-official": true
+  }
+}
