@@ -20,6 +20,11 @@ Adds links ATF Test and ATF Test Suite forms. Using it will add the current reco
 3. Use the link. You'll get a message confirming what was captured, or an error
    if something didn't make it in (e.g. wrong update set scope selected).
 
+## Testing
+
+The app ships two ATF tests covering the capture logic: "Verify Add Test to
+Update Set" and "Verify Add Test Suite to Update Set".
+
 ## Install
 
 **Update set:** [`ATF-Adder-1.0.0.xml`](./ATF-Adder-1.0.0.xml) — use retrieved update sets and preview/commit it like any other update set.

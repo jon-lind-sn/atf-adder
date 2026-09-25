@@ -100,6 +100,14 @@ Re-test that only after rebuilding/redeploying with the guard disabled.
   apps (the SDK default of `1.0.0` is scoped-app-only and silently fails install
   otherwise, before we found the real cause was auth — both issues were fixed,
   keep both fixes).
+- **For ad-hoc record lookups on `xare`, use `npx @servicenow/sdk query <table>
+  -q "<encoded query>"` (the now-sdk CLI), not the `sn-universal` MCP tool.**
+  `sn-universal` needs an interactive auth elicitation step that this
+  environment's transport can't service (`Cannot send 'elicitation/create':
+  this transport context has no back-channel for server-initiated requests.`),
+  so it fails outright here. `now-sdk query` uses the same already-configured
+  `xare` alias and works without any extra prompt. Example:
+  `npx @servicenow/sdk query sys_ui_action -q "nameLIKEUpdate Set" -f name,table,order,list_banner_button,list_context_menu --display-value true`.
 
 ## Build / deploy
 
@@ -203,6 +211,37 @@ suites also the suite + each `sys_atf_test_suite_test` join + member tests + nes
   earlier open unknown there is answered (nothing to miss).
 - **Custom step configs (`sys_atf_step_config`): NOT handled** — see KB caveat
   above; customer-defined step configs won't travel unless captured separately.
+
+## ATF tests for the capture logic (2026-09-25)
+
+`src/fluent/tests/capture-atf.now.ts` defines two ATF tests — **"Verify Add Test
+to Update Set"** and **"Verify Add Test Suite to Update Set"** — that exercise
+`AtfAddToUpdateSet` directly via `atf.server.runServerSideScript` (per the ATF
+guide: a Script Include has no UI, so it's tested this way, not through
+`atf.form`/`atf.catalog`). Each test creates its own scratch test/step (and,
+for the suite test, suite + join) and its own scratch update set scoped to
+`gs.getCurrentApplicationId()`, points the session at it, runs
+`addTestToUpdateSet`/`addTestSuiteToUpdateSet`, and asserts the record counts
+and zero-missing via `assertEqual`. Run them with:
+`npx @servicenow/sdk cicd test run --test-name "<test name>"`.
+
+Two things that weren't obvious while building these, worth remembering:
+
+- **`sys_atf_step` has a mandatory `step_config` field.** Inserting a step
+  without it doesn't throw — it fails as a silent Data Policy Exception, so
+  the insert never actually happens and `addTestToUpdateSet` only touches the
+  test. Use the OOB "Run Server Side Script" step config
+  (`41de4a935332120028bc29cac2dc349a`) for scratch steps in tests.
+- **Don't manually clean up scratch records in a `finally` block.** ATF
+  already wraps each test run in its own metadata rollback context
+  (`ATFRollbackUtil`/`RollbackRecorder`) that automatically undoes every
+  metadata insert/update made during the run — including scratch
+  test/step/suite/join/update-set records and the `sys_update_xml` entries the
+  capture itself creates. Manually deleting those collides with that rollback
+  (NullPointerExceptions trying to delete rows the recorder is also tracking).
+  The only thing the rollback doesn't touch is the `sys_update_set` **user
+  preference** — restore that yourself in `finally` via
+  `gs.getUser().savePreference('sys_update_set', originalPreference || '')`.
 
 ## Adopted vs. new records
 

@@ -115,14 +115,16 @@ AtfAddToUpdateSet.prototype = (function () {
         return { updateSetId: updateSetId, missing: missing };
     }
 
-    function resultMessage(success, recordsTouched, missing) {
+    function resultMessage(gr, success, recordsTouched, missing) {
         // gs.getMessage() renders a bare JS number argument via Java number
         // formatting (e.g. 24 -> "24.0") -- pass counts as strings instead.
         if (success) {
-            return gs.getMessage('Added {0} record(s) to the current update set.', [String(recordsTouched)]);
+            return gs.getMessage('Added {0} record(s) to the current update set for "{1}" ({2}).',
+                [String(recordsTouched), gr.getDisplayValue(), gr.getTableName()]);
         }
-        return gs.getMessage('Captured {0} record(s), but {1} did not make it into the current update set. ' +
-            'Check your update set selection.', [String(recordsTouched), String(missing.length)]);
+        return gs.getMessage('Captured {0} record(s) for "{1}" ({2}), but {3} did not make it into the current ' +
+            'update set. Check your update set selection.',
+            [String(recordsTouched), gr.getDisplayValue(), gr.getTableName(), String(missing.length)]);
     }
 
     function addTestToUpdateSet(testGrOrSysId) {
@@ -140,7 +142,7 @@ AtfAddToUpdateSet.prototype = (function () {
 
         return {
             success: success,
-            message: resultMessage(success, recordsTouched, verification.missing),
+            message: resultMessage(atfTest, success, recordsTouched, verification.missing),
             recordsTouched: recordsTouched,
             missing: verification.missing,
         };
@@ -161,16 +163,22 @@ AtfAddToUpdateSet.prototype = (function () {
 
         return {
             success: success,
-            message: resultMessage(success, recordsTouched, verification.missing),
+            message: resultMessage(atfSuite, success, recordsTouched, verification.missing),
             recordsTouched: recordsTouched,
             missing: verification.missing,
         };
+    }
+
+    function isScopeMatch(grOrSysId, tableName) {
+        var gr = getRecord(grOrSysId, tableName);
+        return scopeMismatchMessage(gr) === null;
     }
 
     return {
         initialize: function () { },
         addTestToUpdateSet: addTestToUpdateSet,
         addTestSuiteToUpdateSet: addTestSuiteToUpdateSet,
+        isScopeMatch: isScopeMatch,
         type: 'AtfAddToUpdateSet',
     };
 })();
