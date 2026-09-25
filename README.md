@@ -23,7 +23,12 @@ Adds links ATF Test and ATF Test Suite forms. Using it will add the current reco
 ## Testing
 
 The app ships two ATF tests covering the capture logic: "Verify Add Test to
-Update Set" and "Verify Add Test Suite to Update Set".
+Update Set" and "Verify Add Test Suite to Update Set". Run them from ATF like
+any other test, or via the SDK, e.g.:
+
+```bash
+npx @servicenow/sdk cicd test run --test-name "Verify Add Test to Update Set"
+```
 
 ## Install
 
