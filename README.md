@@ -28,8 +28,7 @@ selected record(s) and their dependencies to the currently selected update set.
 
 1. Make an update set current, matching the scope of the tests/suites you're capturing.
 2. From the ATF Test or ATF Test Suite list, select the records you want to capture.
-3. Use the `Add Tests to Update Set` or `Add Suites to Update Set` choice from "Actions on selected rows...". Only available when the
-   selected record(s) match the current update set's scope.
+3. Use the `Add Tests to Update Set` or `Add Suites to Update Set` choice from "Actions on selected rows...". 
 
 ## Testing
 
